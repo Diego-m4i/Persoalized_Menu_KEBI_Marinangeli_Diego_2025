@@ -1,0 +1,126 @@
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{TasteTailor-KBS \\ \large A Knowledge-Based Personalized Menu Recommender}
+\author{Your Name - Student ID XXXXX \\
+Course: Knowledge Engineering and Business Intelligence}
+\date{Academic Year 2024/2025}
+
+\begin{document}
+
+\maketitle
+
+\section*{Abstract}
+This document presents the design and implementation of \textbf{TasteTailor-KBS}, a knowledge-based system for personalized menu recommendations in Italian restaurants.  
+The project combines multiple knowledge representation and reasoning approaches: \textit{Decision Tables} (DMN/DRD), a \textit{Prolog} inference engine, an \textit{OWL Knowledge Graph} enriched with SWRL rules, SPARQL queries, SHACL validation, and an agile meta-modelling extension of BPMN 2.0.  
+
+\tableofcontents
+
+\section{Introduction}
+\subsection{Project Description}
+With the increasing digitalization of restaurant menus, customers often browse menus via QR codes on mobile devices.  
+However, small screens and a wide range of dishes make it difficult to quickly identify suitable options, especially for guests with dietary preferences (vegetarian, vegan), allergies (gluten, lactose intolerance) or calorie restrictions.  
+
+\textbf{TasteTailor-KBS} aims to filter and rank dishes according to the customer's stated preferences, budget, seasonality, and other constraints, producing a tailored menu view.
+
+\subsection{Task List}
+The project consists of the following main tasks:
+\begin{enumerate}
+    \item Model decision logic with DMN Decision Requirement Diagrams (DRD) and decision tables.
+    \item Implement facts and rules in Prolog for rule-based reasoning.
+    \item Define an \textit{OWL ontology} with SWRL rules, SPARQL queries, and SHACL shapes.
+    \item Adapt BPMN 2.0 to integrate SPARQL-driven knowledge reasoning within business processes.
+    \item Provide an evaluation of advantages and disadvantages of each approach.
+\end{enumerate}
+
+\section{Knowledge-Based Solution}
+\subsection{Decision Tables (DMN/DRD)}
+The DMN model is organized in a DRD that decomposes the main decision \textit{"Recommend Dishes"} into sub-decisions:
+\begin{itemize}
+    \item \textbf{Filter by Diet}: excludes dishes incompatible with vegan, vegetarian, or carnivore profiles.
+    \item \textbf{Filter by Allergens}: removes dishes containing allergens relevant to the guest.
+    \item \textbf{Check Calorie/Budget Constraints}: retains only dishes under a calorie threshold and within the guest's budget.
+    \item \textbf{Ranking}: assigns scores based on preferred cuisine, seasonality, and spiciness.
+\end{itemize}
+The decision tables are modular, allowing updates to a single rule without impacting the entire logic.
+
+\subsection{Prolog}
+The Prolog knowledge base defines:
+\begin{itemize}
+    \item Facts for ingredients, categories, calories, and allergens.
+    \item Facts for dishes (category, cuisine, price, seasonality, spiciness).
+    \item Rules for dietary compatibility, allergen filtering, budget constraints, and spiciness tolerance.
+    \item A predicate \texttt{recommend/7} to generate ranked lists of suitable dishes.
+\end{itemize}
+
+\subsection{Ontology and Knowledge Graph}
+\subsubsection{Protégé Modelling}
+The OWL 2 DL ontology defines:
+\begin{itemize}
+    \item Classes: \texttt{Dish}, \texttt{Ingredient}, \texttt{Allergen}, \texttt{Diet}.
+    \item Disjoint ingredient types (e.g., \texttt{Dairy}, \texttt{Meat}, \texttt{Vegetable}).
+    \item Object properties linking dishes to ingredients, and ingredients to allergens and types.
+    \item Datatype properties for price, cuisine, season, calories, spiciness.
+\end{itemize}
+
+\subsubsection{SWRL Rules}
+SWRL rules infer:
+\begin{itemize}
+    \item Whether a dish belongs to a dietary profile.
+    \item Whether a dish contains allergens.
+    \item Whether a dish meets calorie constraints.
+\end{itemize}
+
+\subsubsection{SPARQL Queries}
+Three main SPARQL queries are implemented:
+\begin{enumerate}
+    \item Vegan dishes under budget in preferred cuisines.
+    \item Allergen-free dishes (e.g., lactose- and gluten-free).
+    \item Seasonal specialties within a spiciness tolerance.
+\end{enumerate}
+
+\subsubsection{SHACL Shapes}
+SHACL validation shapes ensure:
+\begin{itemize}
+    \item Numeric consistency for calories and price.
+    \item Minimum number of ingredients per dish.
+    \item Cardinality constraints for optional properties.
+\end{itemize}
+
+\section{Agile BPMN Meta-Modelling}
+The BPMN 2.0 \texttt{Task} element is extended into a \texttt{MenuRecommenderTask} class with additional properties:
+\begin{itemize}
+    \item \texttt{targetsGuestProfile}
+    \item \texttt{readsFromDataset}
+    \item \texttt{usesQuery}
+    \item \texttt{producesListOf}
+\end{itemize}
+A fork icon is added to the BPMN task shape for visual recognition of recommendation steps.
+
+\section{Conclusions}
+\subsection{Advantages}
+\begin{itemize}
+    \item \textbf{DMN}: Understandable by non-technical stakeholders; easy to modify.
+    \item \textbf{Prolog}: Highly expressive and suitable for prototyping.
+    \item \textbf{Ontology}: Standards-based, enables reasoning and interoperability.
+    \item \textbf{BPMN Extension}: Bridges business processes with semantic knowledge.
+\end{itemize}
+
+\subsection{Disadvantages}
+\begin{itemize}
+    \item \textbf{DMN}: Complex cases may require many interconnected tables.
+    \item \textbf{Prolog}: Steeper learning curve for developers unfamiliar with logic programming.
+    \item \textbf{Ontology/SWRL}: Reasoner performance may degrade with large datasets.
+    \item \textbf{BPMN Extension}: Requires custom tooling for full usability.
+\end{itemize}
+
+\subsection{Personal Reflection}
+The project demonstrated the benefits of integrating heterogeneous knowledge representation formalisms to solve a real-world recommendation problem.  
+The main challenge was ensuring consistency across the different layers (DMN tables, Prolog rules, OWL ontology) and maintaining interoperability.  
+Future extensions could include historical preference learning, multi-language support, and integration with data-driven recommender models.
+
+\end{document}
