@@ -1,0 +1,105 @@
+PREFIX mod: <http://fhnw.ch/modelingEnvironment/ModelOntology#>
+PREFIX lo: <http://fhnw.ch/modelingEnvironment/LanguageOntology#>
+PREFIX : <http://www.semanticweb.org/kebi.marinangelidiego#>
+
+SELECT ?dish ?course ?calories
+WHERE {
+
+  VALUES ?desiredFoodProfile {
+    :Vegetarian
+  }
+
+  VALUES ?desiredCalorieProfile {
+    :Moderate
+  }
+
+  VALUES ?excludedAllergy {
+    :Shellfish
+  }
+
+  ?dish a :Dish ;
+        :hasTotalCalories ?calories ;
+        :belongs_to_the ?course .
+
+  ?course a :Course .
+
+  ?dish :suggested_for ?foodprofile .
+  ?dish :inDesiredCaloriesProfile ?caloriesprofile . 
+
+  BIND(IF(?foodprofile = ?desiredFoodProfile, 1, 0) AS ?v1)
+  BIND(IF(?caloriesprofile = ?desiredCalorieProfile, 1, 0) AS ?v2)
+  BIND((?v1 * ?v2) AS ?suggestion)
+
+  FILTER(?suggestion > 0)
+
+  FILTER NOT EXISTS {
+    ?dish :contains_allergy ?excludedAllergy
+  }
+}
+
+
+
+
+PREFIX : <http://www.semanticweb.org/kebi.marinangelidiego#>
+
+SELECT ?dish ?course ?calories
+WHERE {
+  ?dish a :Dish ;
+        :hasTotalCalories ?calories ;
+        :belongs_to_the ?course ;
+        :suggested_for ?foodProfile .
+
+  VALUES ?foodProfile { :Vegetarian }
+}
+
+
+PREFIX : <http://www.semanticweb.org/kebi.marinangelidiego#>
+
+SELECT ?dish
+WHERE {
+  ?dish :containsIngredient ?ingredient .
+  ?ingredient :type :Meat
+}
+
+
+PREFIX : <http://www.semanticweb.org/kebi.marinangelidiego#>
+
+SELECT ?dish
+WHERE {
+  ?dish :containsAllergen ?allergen .
+  FILTER NOT EXISTS { ?allergen :name "Lactose" }
+}
+
+
+PREFIX : <http://www.semanticweb.org/kebi.marinangelidiego#>
+
+SELECT ?dish ?calories
+WHERE {
+  ?dish :hasTotalCalories ?calories .
+  FILTER (?calories >= 200 && ?calories <= 700)
+}
+
+
+PREFIX : <http://www.semanticweb.org/kebi.marinangelidiego#>
+
+SELECT ?dish
+WHERE {
+  ?dish :containsAllergen ?allergen1 .
+  ?dish :containsAllergen ?allergen2 .
+  FILTER NOT EXISTS { ?allergen1 :name "Gluten" }
+  
+
+  PREFIX : <http://www.semanticweb.org/kebi.marinangelidiego#>
+
+SELECT ?dish
+WHERE {
+  ?dish :belongs_to_the :MainCourse
+}
+
+
+PREFIX : <http://www.semanticweb.org/kebi.marinangelidiego#>
+
+SELECT ?dish
+WHERE {
+  ?dish :suggested_for :Vegan
+}
