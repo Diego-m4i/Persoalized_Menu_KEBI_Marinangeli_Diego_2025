@@ -1,0 +1,81 @@
+@prefix :      <http://www.semanticweb.org/kebi.marinangelidiego#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+ex:DishShape a sh:NodeShape ;
+    sh:targetClass ex:Dish ;
+    sh:property [
+        sh:path ex:hasName ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ex:containsIngredient ;
+        sh:class ex:Ingredient ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ex:belongsToCourse ;
+        sh:class ex:Course ;
+        sh:minCount 1 ;
+    ] .
+		
+ex:IngredientShape a sh:NodeShape ;
+    sh:targetClass ex:Ingredient ;
+    sh:property [
+        sh:path ex:type ;
+        sh:in (ex:Meat ex:Fish ex:Dairy ex:Vegetable ex:Cereal) ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ex:hasCalories ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+    ] .
+
+ex:GuestProfileShape a sh:NodeShape ;
+    sh:targetClass ex:GuestProfile ;
+    sh:property [
+        sh:path ex:profileType ;
+        sh:in (ex:Vegetarian ex:Vegan ex:Pescatarian) ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ex:canConsumeDish ;
+        sh:class ex:Dish ;
+        sh:minCount 1 ;
+    ] .
+
+
+ex:AllergenShape a sh:NodeShape ;
+    sh:targetClass ex:Allergy ;
+    sh:property [
+        sh:path ex:containsAllergen ;
+        sh:class ex:AllergyType ;
+        sh:minCount 0 ;  # Allergy is optional
+    ] ;
+    sh:property [
+        sh:path ex:linkedToDish ;
+        sh:class ex:Dish ;
+        sh:minCount 1 ;
+    ] .
+ex:CaloriesDesiredShape a sh:NodeShape ;
+    sh:targetClass ex:CaloriesDesired ;
+    sh:property [
+        sh:path ex:hasMinCalories ;
+        sh:datatype xsd:int ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ex:hasMaxCalories ;
+        sh:datatype xsd:int ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path ex:belongsToCaloriesRange ;
+        sh:class ex:Dish ;
+        sh:minCount 1 ;
+    ] .
