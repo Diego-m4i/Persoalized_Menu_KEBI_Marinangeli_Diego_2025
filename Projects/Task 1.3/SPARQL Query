@@ -1,45 +1,3 @@
-PREFIX mod: <http://fhnw.ch/modelingEnvironment/ModelOntology#>
-PREFIX lo: <http://fhnw.ch/modelingEnvironment/LanguageOntology#>
-PREFIX : <http://www.semanticweb.org/kebi.marinangelidiego#>
-
-SELECT ?dish ?course ?calories
-WHERE {
-
-  VALUES ?desiredFoodProfile {
-    :Vegetarian
-  }
-
-  VALUES ?desiredCalorieProfile {
-    :Moderate
-  }
-
-  VALUES ?excludedAllergy {
-    :Shellfish
-  }
-
-  ?dish a :Dish ;
-        :hasTotalCalories ?calories ;
-        :belongs_to_the ?course .
-
-  ?course a :Course .
-
-  ?dish :suggested_for ?foodprofile .
-  ?dish :inDesiredCaloriesProfile ?caloriesprofile . 
-
-  BIND(IF(?foodprofile = ?desiredFoodProfile, 1, 0) AS ?v1)
-  BIND(IF(?caloriesprofile = ?desiredCalorieProfile, 1, 0) AS ?v2)
-  BIND((?v1 * ?v2) AS ?suggestion)
-
-  FILTER(?suggestion > 0)
-
-  FILTER NOT EXISTS {
-    ?dish :contains_allergy ?excludedAllergy
-  }
-}
-
-
-
-
 PREFIX : <http://www.semanticweb.org/kebi.marinangelidiego#>
 
 SELECT ?dish ?course ?calories
@@ -102,4 +60,5 @@ PREFIX : <http://www.semanticweb.org/kebi.marinangelidiego#>
 SELECT ?dish
 WHERE {
   ?dish :suggested_for :Vegan
+
 }
