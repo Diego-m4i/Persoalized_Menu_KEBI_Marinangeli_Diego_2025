@@ -1,0 +1,1832 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/kebi.marinangelidiego#"
+     xml:base="http://www.semanticweb.org/kebi.marinangelidiego"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:kebi-marinangelidiego="http://www.semanticweb.org/kebi-marinangelidiego#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/kebi-marinangelidiego"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#HasCaloriesDesired -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#HasCaloriesDesired">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Guest"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#CaloriesDesired"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#HasFoodProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#HasFoodProfile">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Guest"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#GuestProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#allergenIsContained -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#allergenIsContained">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#contains_allergen"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Allergen"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#belongs_to_the -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#belongs_to_the">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Course"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#isContainedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#contains_allergen -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#contains_allergen">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Allergen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#course_includes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#course_includes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Course"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#guestSufferFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#guestSufferFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Guest"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Allergen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#hasDesiredCaloriesDishes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#hasDesiredCaloriesDishes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#CaloriesDesired"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#hasPersonalizedMenuDish -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#hasPersonalizedMenuDish">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#inPersonalizedMenuOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Guest"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#inDesiredCaloriesProfile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#inDesiredCaloriesProfile">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#CaloriesDesired"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#inPersonalizedMenuOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#inPersonalizedMenuOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Guest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#includeDishes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#includeDishes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#suggested_for"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#GuestProfile"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#isContainedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#isContainedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#suggested_for -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#suggested_for">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#GuestProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#hasCalories -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#hasCalories">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#hasMaxCalories -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#hasMaxCalories">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#CaloriesDesired"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#hasMinCalories -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#hasMinCalories">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#CaloriesDesired"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#hasTotalCalories -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#hasTotalCalories">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Allergen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Allergen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Menu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#CaloriesDesired -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#CaloriesDesired">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Menu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Cereal_and_Grains -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Cereal_and_Grains">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Course -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Course">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Menu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Dairy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Dairy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Dish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Dish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Menu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Drinks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Drinks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Menu"/>
+        <dc:creator>marin</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Fish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Fish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#FishDish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#FishDish">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Guest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Guest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Menu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#GuestProfile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#GuestProfile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Menu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Ingredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Menu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Meat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Meat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#MeatDish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#MeatDish">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Meat"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Meat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Menu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Menu">
+        <dc:creator>marin</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Season -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Season">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Menu"/>
+        <dc:creator>marin</dc:creator>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#VeganDish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#VeganDish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#VegetarianDish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#VegetarianDish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#AllSeason -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#AllSeason">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Season"/>
+        <dc:creator>marin</dc:creator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Appetizer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Appetizer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Course"/>
+        <kebi-marinangelidiego:course_includes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Caprese_Salad"/>
+        <kebi-marinangelidiego:course_includes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Octopus_Salad"/>
+        <kebi-marinangelidiego:course_includes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato_Bruschetta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Balanced -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Balanced">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#CaloriesDesired"/>
+        <kebi-marinangelidiego:hasDesiredCaloriesDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Caprese_Salad"/>
+        <kebi-marinangelidiego:hasDesiredCaloriesDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Grilled_Salmon"/>
+        <kebi-marinangelidiego:hasDesiredCaloriesDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Saltimbocca_Alla_Romana"/>
+        <kebi-marinangelidiego:hasDesiredCaloriesDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole"/>
+        <kebi-marinangelidiego:hasDesiredCaloriesDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu"/>
+        <kebi-marinangelidiego:hasDesiredCaloriesDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato_Bruschetta"/>
+        <kebi-marinangelidiego:hasMaxCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500</kebi-marinangelidiego:hasMaxCalories>
+        <kebi-marinangelidiego:hasMinCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</kebi-marinangelidiego:hasMinCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Basil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Basil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Caprese_Salad"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato_Bruschetta"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Bechamel_sauce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Bechamel_sauce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dairy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lasagna"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Beef -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Beef">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Meat"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lasagna"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Bread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Bread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Cereal_and_Grains"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato_Bruschetta"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Breadcrumbs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Breadcrumbs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Cereal_and_Grains"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Milanese_Cutlet"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Broccoli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Broccoli">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <dc:creator>marin</dc:creator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Butter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Butter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dairy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin_Risotto"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Saltimbocca_Alla_Romana"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">325</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Caprese_Salad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Caprese_Salad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#VegetarianDish"/>
+        <kebi-marinangelidiego:belongs_to_the rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Appetizer"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Basil"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Mozzarella"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Olive_oil"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lactose"/>
+        <kebi-marinangelidiego:inDesiredCaloriesProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Balanced"/>
+        <kebi-marinangelidiego:suggested_for rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetarian"/>
+        <kebi-marinangelidiego:hasTotalCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">439</kebi-marinangelidiego:hasTotalCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Carnivor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Carnivor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#GuestProfile"/>
+        <kebi-marinangelidiego:includeDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lasagna"/>
+        <kebi-marinangelidiego:includeDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Milanese_Cutlet"/>
+        <kebi-marinangelidiego:includeDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Saltimbocca_Alla_Romana"/>
+        <kebi-marinangelidiego:includeDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Zuppa_inglese"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Cocoa_powder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Cocoa_powder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">138</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Cola -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Cola">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Drinks"/>
+        <dc:creator>marin</dc:creator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Cream -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Cream">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dairy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Zuppa_inglese"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">340</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Dessert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Dessert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Course"/>
+        <kebi-marinangelidiego:course_includes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu"/>
+        <kebi-marinangelidiego:course_includes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Zuppa_inglese"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Diego -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Diego">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Guest"/>
+        <kebi-marinangelidiego:HasCaloriesDesired rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Balanced"/>
+        <kebi-marinangelidiego:HasFoodProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Egg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Egg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dairy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Milanese_Cutlet"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">143</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Eggs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Eggs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Allergen"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Milanese_Cutlet"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#First -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#First">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Course"/>
+        <kebi-marinangelidiego:course_includes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lasagna"/>
+        <kebi-marinangelidiego:course_includes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin_Risotto"/>
+        <kebi-marinangelidiego:course_includes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Fish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Fish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Allergen"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Grilled_Salmon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Fish_Based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Fish_Based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#GuestProfile"/>
+        <kebi-marinangelidiego:includeDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Grilled_Salmon"/>
+        <kebi-marinangelidiego:includeDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Octopus_Salad"/>
+        <kebi-marinangelidiego:includeDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Francesco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Francesco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Guest"/>
+        <kebi-marinangelidiego:HasCaloriesDesired rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#High"/>
+        <kebi-marinangelidiego:HasFoodProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Carnivor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Frying_oil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Frying_oil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Milanese_Cutlet"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Garlic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Garlic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato_Bruschetta"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">149</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Gelatin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Gelatin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Meat"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Zuppa_inglese"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Gluten -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Gluten">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Allergen"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lasagna"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Milanese_Cutlet"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato_Bruschetta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Grilled_Salmon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Grilled_Salmon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#FishDish"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+            </owl:Restriction>
+        </rdf:type>
+        <kebi-marinangelidiego:belongs_to_the rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Main"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lemon"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Olive_oil"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Rosemary"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Salmon"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+        <kebi-marinangelidiego:inDesiredCaloriesProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Balanced"/>
+        <kebi-marinangelidiego:suggested_for rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish_Based"/>
+        <kebi-marinangelidiego:hasTotalCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</kebi-marinangelidiego:hasTotalCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Ham -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Ham">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Meat"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Saltimbocca_Alla_Romana"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#High -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#High">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#CaloriesDesired"/>
+        <kebi-marinangelidiego:hasDesiredCaloriesDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lasagna"/>
+        <kebi-marinangelidiego:hasMinCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</kebi-marinangelidiego:hasMinCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Lactose -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Lactose">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Allergen"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Caprese_Salad"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lasagna"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin_Risotto"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Saltimbocca_Alla_Romana"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Zuppa_inglese"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Lady_fingers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Lady_fingers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Cereal_and_Grains"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Lasagna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Lasagna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#MeatDish"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Meat"/>
+            </owl:Restriction>
+        </rdf:type>
+        <kebi-marinangelidiego:belongs_to_the rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#First"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Bechamel_sauce"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Beef"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Parmesan"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Pasta_sheets"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato_sauce"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Gluten"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lactose"/>
+        <kebi-marinangelidiego:inDesiredCaloriesProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#High"/>
+        <kebi-marinangelidiego:suggested_for rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Carnivor"/>
+        <kebi-marinangelidiego:hasTotalCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1563</kebi-marinangelidiego:hasTotalCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Lemon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Lemon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Grilled_Salmon"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Light -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Light">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#CaloriesDesired"/>
+        <kebi-marinangelidiego:hasDesiredCaloriesDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Octopus_Salad"/>
+        <kebi-marinangelidiego:hasMaxCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</kebi-marinangelidiego:hasMaxCalories>
+        <kebi-marinangelidiego:hasMinCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</kebi-marinangelidiego:hasMinCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Main -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Main">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Course"/>
+        <kebi-marinangelidiego:course_includes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Grilled_Salmon"/>
+        <kebi-marinangelidiego:course_includes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Milanese_Cutlet"/>
+        <kebi-marinangelidiego:course_includes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Saltimbocca_Alla_Romana"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Mascarpone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Mascarpone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dairy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">210</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Mattia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Mattia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Guest"/>
+        <kebi-marinangelidiego:HasCaloriesDesired rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Rich"/>
+        <kebi-marinangelidiego:HasFoodProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetarian"/>
+        <kebi-marinangelidiego:guestSufferFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Eggs"/>
+        <kebi-marinangelidiego:guestSufferFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Gluten"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Michela -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Michela">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Guest"/>
+        <kebi-marinangelidiego:HasCaloriesDesired rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Light"/>
+        <kebi-marinangelidiego:HasFoodProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish_Based"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Milanese_Cutlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Milanese_Cutlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#MeatDish"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Meat"/>
+            </owl:Restriction>
+        </rdf:type>
+        <kebi-marinangelidiego:belongs_to_the rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Main"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Breadcrumbs"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Egg"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Frying_oil"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Veal"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Eggs"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Gluten"/>
+        <kebi-marinangelidiego:inDesiredCaloriesProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Rich"/>
+        <kebi-marinangelidiego:suggested_for rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Carnivor"/>
+        <kebi-marinangelidiego:hasTotalCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">773</kebi-marinangelidiego:hasTotalCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Mollusks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Mollusks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Allergen"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Octopus_Salad"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Mozzarella -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Mozzarella">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dairy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Caprese_Salad"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">280</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Mussels -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Mussels">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Octopus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Octopus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Octopus_Salad"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Octopus_Salad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Octopus_Salad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#FishDish"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+            </owl:Restriction>
+        </rdf:type>
+        <kebi-marinangelidiego:belongs_to_the rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Appetizer"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Octopus"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Olive_oil"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Parlsey"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Potato"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Mollusks"/>
+        <kebi-marinangelidiego:inDesiredCaloriesProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Light"/>
+        <kebi-marinangelidiego:suggested_for rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish_Based"/>
+        <kebi-marinangelidiego:hasTotalCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">314</kebi-marinangelidiego:hasTotalCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Olive_oil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Olive_oil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Caprese_Salad"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Grilled_Salmon"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Octopus_Salad"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">119</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Parlsey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Parlsey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Octopus_Salad"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Parmesan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Parmesan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dairy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lasagna"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin_Risotto"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">413</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Pasta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Pasta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Cereal_and_Grains"/>
+        <dc:creator>marin</dc:creator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Pasta_sheets -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Pasta_sheets">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Cereal_and_Grains"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lasagna"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Peanuts -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Peanuts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Potato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Potato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Octopus_Salad"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Prosecco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Prosecco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Drinks"/>
+        <dc:creator>marin</dc:creator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin_Risotto"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin_Risotto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin_Risotto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#VegetarianDish"/>
+        <kebi-marinangelidiego:belongs_to_the rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#First"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Butter"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Parmesan"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Rice"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lactose"/>
+        <kebi-marinangelidiego:inDesiredCaloriesProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Rich"/>
+        <kebi-marinangelidiego:suggested_for rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetarian"/>
+        <kebi-marinangelidiego:hasTotalCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">894</kebi-marinangelidiego:hasTotalCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Rice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Rice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Cereal_and_Grains"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin_Risotto"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Rich -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Rich">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#CaloriesDesired"/>
+        <kebi-marinangelidiego:hasDesiredCaloriesDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Milanese_Cutlet"/>
+        <kebi-marinangelidiego:hasDesiredCaloriesDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin_Risotto"/>
+        <kebi-marinangelidiego:hasDesiredCaloriesDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Zuppa_inglese"/>
+        <kebi-marinangelidiego:hasMaxCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</kebi-marinangelidiego:hasMaxCalories>
+        <kebi-marinangelidiego:hasMinCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500</kebi-marinangelidiego:hasMinCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Rosemary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Rosemary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Grilled_Salmon"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">131</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Sage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Sage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Saltimbocca_Alla_Romana"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Salmon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Salmon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Grilled_Salmon"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">208</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Saltimbocca_Alla_Romana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Saltimbocca_Alla_Romana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#MeatDish"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Meat"/>
+            </owl:Restriction>
+        </rdf:type>
+        <kebi-marinangelidiego:belongs_to_the rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Main"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Butter"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ham"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Sage"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Veal"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lactose"/>
+        <kebi-marinangelidiego:inDesiredCaloriesProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Balanced"/>
+        <kebi-marinangelidiego:suggested_for rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Carnivor"/>
+        <kebi-marinangelidiego:hasTotalCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">635</kebi-marinangelidiego:hasTotalCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Shellfish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Shellfish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Allergen"/>
+        <kebi-marinangelidiego:allergenIsContained rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Shrimp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Shrimp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Soy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Soy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#FishDish"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+            </owl:Restriction>
+        </rdf:type>
+        <kebi-marinangelidiego:belongs_to_the rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#First"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Garlic"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Mussels"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Parlsey"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Pasta"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Rice"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Shrimp"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Squid"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Mollusks"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Shellfish"/>
+        <kebi-marinangelidiego:inDesiredCaloriesProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Balanced"/>
+        <kebi-marinangelidiego:suggested_for rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish_Based"/>
+        <kebi-marinangelidiego:hasTotalCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">578</kebi-marinangelidiego:hasTotalCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Spinach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Spinach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</kebi-marinangelidiego:hasCalories>
+        <dc:creator>marin</dc:creator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Squid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Squid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Spaghetti_alle_vongole"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Sugar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Sugar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Zuppa_inglese"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">387</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Summer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Summer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Season"/>
+        <dc:creator>marin</dc:creator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Tea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Tea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Drinks"/>
+        <dc:creator>marin</dc:creator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#VegetarianDish"/>
+        <kebi-marinangelidiego:belongs_to_the rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dessert"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Cocoa_powder"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Coffee"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Egg"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lady_fingers"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Mascarpone"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Eggs"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Gluten"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lactose"/>
+        <kebi-marinangelidiego:inDesiredCaloriesProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Balanced"/>
+        <kebi-marinangelidiego:suggested_for rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetarian"/>
+        <kebi-marinangelidiego:hasTotalCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">693</kebi-marinangelidiego:hasTotalCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Caprese_Salad"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato_Bruschetta"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Tomato_Bruschetta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Tomato_Bruschetta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#VeganDish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#VegetarianDish"/>
+        <kebi-marinangelidiego:belongs_to_the rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Appetizer"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Basil"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Bread"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Garlic"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Gluten"/>
+        <kebi-marinangelidiego:inDesiredCaloriesProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Balanced"/>
+        <kebi-marinangelidiego:suggested_for rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegan"/>
+        <kebi-marinangelidiego:suggested_for rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetarian"/>
+        <kebi-marinangelidiego:hasTotalCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">439</kebi-marinangelidiego:hasTotalCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Tomato_sauce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Tomato_sauce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lasagna"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Tree_nuts -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Tree_nuts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Vanilla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Vanilla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Zuppa_inglese"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Veal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Veal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Ingredient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Meat"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Milanese_Cutlet"/>
+        <kebi-marinangelidiego:isContainedBy rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Saltimbocca_Alla_Romana"/>
+        <kebi-marinangelidiego:hasCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</kebi-marinangelidiego:hasCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Vegan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Vegan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#GuestProfile"/>
+        <kebi-marinangelidiego:includeDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato_Bruschetta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Vegetarian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Vegetarian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#GuestProfile"/>
+        <kebi-marinangelidiego:includeDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Caprese_Salad"/>
+        <kebi-marinangelidiego:includeDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Pumpkin_Risotto"/>
+        <kebi-marinangelidiego:includeDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tiramisu"/>
+        <kebi-marinangelidiego:includeDishes rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato_Bruschetta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Vegetarian_rice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Vegetarian_rice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#VegetarianDish"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Rice"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Spinach"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Tomato"/>
+        <dc:creator>marin</dc:creator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Drinks"/>
+        <dc:creator>marin</dc:creator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Wine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Wine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Drinks"/>
+        <dc:creator>marin</dc:creator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kebi-marinangelidiego#Zuppa_inglese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Zuppa_inglese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#MeatDish"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Meat"/>
+            </owl:Restriction>
+        </rdf:type>
+        <kebi-marinangelidiego:belongs_to_the rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dessert"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Cream"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Gelatin"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Sugar"/>
+        <kebi-marinangelidiego:containsIngredient rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vanilla"/>
+        <kebi-marinangelidiego:contains_allergen rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Lactose"/>
+        <kebi-marinangelidiego:inDesiredCaloriesProfile rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Rich"/>
+        <kebi-marinangelidiego:suggested_for rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Carnivor"/>
+        <kebi-marinangelidiego:hasTotalCalories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">749</kebi-marinangelidiego:hasTotalCalories>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Dish"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#FishDish"/>
+    </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Cereal_and_Grains"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Dairy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Fish"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Meat"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kebi-marinangelidiego#Vegetable_and_plant-based"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kebi.task3.pirani-machella#d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Deduce dishes for fish based profile</rdfs:comment>
+        <rdfs:label>Fish</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#FishDish"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#suggested_for"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Fish_Based"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Deduce dishes for meat profile</rdfs:comment>
+        <rdfs:label>Meat</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#MeatDish"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#suggested_for"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#p"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Carnivor"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Deduce dishes for vegan profile</rdfs:comment>
+        <rdfs:label>Vegan</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#VeganDish"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#suggested_for"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegan"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Deduce Dish for vegan profile</rdfs:comment>
+        <rdfs:label>Vegan</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#VeganDish"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#suggested_for"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#d"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegan"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Deduce Dish for Vegetarian Profile</rdfs:comment>
+        <rdfs:label>Vegetarian</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#VegetarianDish"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#suggested_for"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetarian"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Deduce for vegetarian profile</rdfs:comment>
+        <rdfs:label>Vegetarian</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#VegetarianDish"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani-machella#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#suggested_for"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani-machella#d"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#Vegetarian"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Deduce dish contained</rdfs:comment>
+        <rdfs:label>isContained</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#containsIngredient"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#isContainedBy"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#y"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Deduce in which dishes is contained an allergy</rdfs:comment>
+        <rdfs:label>AllergyIsContained</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#contains_allergen"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kebi-marinangelidiego#allergenIsContained"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#y"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/kebi.task3.pirani&amp;machella#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
